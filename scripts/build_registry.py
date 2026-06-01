@@ -2,6 +2,7 @@ import os
 import json
 import datetime
 import requests
+import concurrent.futures
 
 ORG_NAME = "nexhq"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
@@ -51,25 +52,42 @@ def fetch_nex_json(repo_name, default_branch):
         
     return None
 
+def process_repo(repo):
+    """Worker function to process a single repository."""
+    name = repo["name"]
+    # Skip this repository itself to avoid recursive scanning of the central repo
+    if name == "hq-tools":
+        return None
+        
+    default_branch = repo.get("default_branch", "main")
+
+    nex_manifest = fetch_nex_json(name, default_branch)
+    if nex_manifest:
+        return nex_manifest
+    return None
+
 def main():
     print(f"Fetching public repositories for '{ORG_NAME}'...")
     repos = fetch_public_repos()
     print(f"Found {len(repos)} public repositories.")
 
     tools = []
-    for repo in repos:
-        name = repo["name"]
-        # Skip this repository itself to avoid recursive scanning of the central repo
-        if name == "hq-tools":
-            continue
-            
-        default_branch = repo.get("default_branch", "main")
-        print(f"Checking {name} (branch: {default_branch}) for nex.json...")
+    
+    # Process repositories concurrently to map them much faster
+    print("Scanning repositories concurrently for nex.json manifests...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        # Submit all tasks
+        future_to_repo = {executor.submit(process_repo, repo): repo for repo in repos}
+        
+        # Gather results as they complete
+        for future in concurrent.futures.as_completed(future_to_repo):
+            manifest = future.result()
+            if manifest:
+                print(f"  [+] Found valid tool manifest: {manifest.get('name', 'Unknown')}")
+                tools.append(manifest)
 
-        nex_manifest = fetch_nex_json(name, default_branch)
-        if nex_manifest:
-            print(f"  [+] Found valid tool manifest: {nex_manifest.get('name', 'Unknown')}")
-            tools.append(nex_manifest)
+    # Sort tools by name for consistent payload ordering
+    tools = sorted(tools, key=lambda x: x.get("name", ""))
 
     # Construct the final registry payload
     registry = {
