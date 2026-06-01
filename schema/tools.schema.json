@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NexHQ Tools Registry",
+  "description": "Schema for the generated centralized tools JSON registry.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The UTC timestamp when this index was generated."
+    },
+    "organization": {
+      "type": "string",
+      "description": "The GitHub organization name."
+    },
+    "tools": {
+      "type": "array",
+      "description": "An array of tool manifests fetched from individual repositories.",
+      "items": {
+        "type": "object",
+        "description": "Content of the nex.json file from the tools repository."
+      }
+    }
+  },
+  "required": [
+    "lastUpdated",
+    "organization",
+    "tools"
+  ],
+  "additionalProperties": false
+}
