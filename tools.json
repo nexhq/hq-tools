@@ -1,6 +1,3353 @@
 {
   "$schema": "https://raw.githubusercontent.com/nexhq/hq-tools/main/schema/tools.schema.json",
-  "lastUpdated": "2026-06-01T00:00:00.000000Z",
+  "lastUpdated": "2026-06-01T03:07:59ZZ",
   "organization": "nexhq",
-  "tools": []
+  "tools": [
+    {
+      "author": {
+        "name": "0xkiraa"
+      },
+      "categories": [
+        "Network Mapping"
+      ],
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Fast, stealthy ARP scan to discover active devices (IP, MAC, Manufacturer) using Python.",
+      "entrypoint": "main.py",
+      "id": "network.lanmap",
+      "keywords": [
+        "arp",
+        "scan",
+        "network",
+        "recon"
+      ],
+      "license": "MIT",
+      "name": "LanMap",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "0.1.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/devkiraa/nex/main/registry/schema/nex-package.schema.json",
+      "author": {
+        "github": "devkiraa",
+        "name": "devkiraa"
+      },
+      "description": "Pull entire websites for offline viewing",
+      "id": "devkiraa.pagepull",
+      "license": "MIT",
+      "name": "PagePull",
+      "python": {
+        "entry": "pagepull.py",
+        "requirements": "requirements.txt",
+        "version": "\u003e=3.8"
+      },
+      "repository": "https://github.com/devkiraa/pagepull",
+      "run": {
+        "args": [
+          "pagepull.py"
+        ],
+        "command": "python",
+        "passthrough_args": true
+      },
+      "type": "python",
+      "version": "1.0.0"
+    },
+    {
+      "author": "User",
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Crawls a site to find URL parameters reflecting input, finding potential injection points.",
+      "entrypoint": "main.py",
+      "id": "recon.paramspider",
+      "license": "MIT",
+      "name": "ParamSpider",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "0.1.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Scans NTFS Alternate Data Streams for hidden data",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.ads-scan",
+      "keywords": [
+        "forensics",
+        "ntfs",
+        "ads"
+      ],
+      "license": "MIT",
+      "name": "ads-scan",
+      "repository": "https://github.com/nexhq/ads-scan",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses AmCache.hve for program execution history",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.amcache",
+      "keywords": [
+        "forensics",
+        "windows",
+        "execution"
+      ],
+      "license": "MIT",
+      "name": "amcache",
+      "repository": "https://github.com/nexhq/amcache",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "ARP spoofing implementation for MITM attacks. Also includes a passive network traffic monitor mode when run without arguments.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.arp-poison",
+      "keywords": [],
+      "license": "MIT",
+      "name": "arp-poison",
+      "repository": "https://github.com/0xkiraa/arp-poison",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Dumps current ARP table",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.arp-table",
+      "keywords": [
+        "network",
+        "arp",
+        "discovery"
+      ],
+      "license": "MIT",
+      "name": "arp-table",
+      "repository": "https://github.com/nexhq/arp-table",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Uses Whisper model to transcribe audio files",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.audio-trans",
+      "keywords": [
+        "forensics",
+        "audio",
+        "transcription"
+      ],
+      "license": "MIT",
+      "name": "audio-trans",
+      "repository": "https://github.com/nexhq/audio-trans",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Logs every command run during the session",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.audit-trail",
+      "keywords": [
+        "documentation",
+        "audit",
+        "logging"
+      ],
+      "license": "MIT",
+      "name": "audit-trail",
+      "repository": "https://github.com/nexhq/audit-trail",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Generates DuckyScript for specific tasks.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.bad-usb",
+      "keywords": [
+        "ducky",
+        "usb",
+        "hid"
+      ],
+      "license": "MIT",
+      "name": "bad-usb",
+      "repository": "https://github.com/0xkiraa/bad-usb",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses Background Activity Moderator (BAM/DAM) data",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.bam-dam",
+      "keywords": [
+        "forensics",
+        "windows",
+        "execution"
+      ],
+      "license": "MIT",
+      "name": "bam-dam",
+      "repository": "https://github.com/nexhq/bam-dam",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Simple HTTP beacon that checks for commands.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.c2-beacon",
+      "keywords": [
+        "c2",
+        "beacon",
+        "botnet"
+      ],
+      "license": "MIT",
+      "name": "c2-beacon",
+      "repository": "https://github.com/0xkiraa/c2-beacon",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "kiran s",
+        "name": "kiran s"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Recovers images from browser cache",
+      "entrypoint": "main.py",
+      "id": "kiran s.cache-view",
+      "keywords": [],
+      "license": "MIT",
+      "name": "cache-view",
+      "repository": "https://github.com/kiran s/cache-view",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "0.1.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts camera serial number from EXIF data",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.cam-serial",
+      "keywords": [
+        "forensics",
+        "exif",
+        "camera"
+      ],
+      "license": "MIT",
+      "name": "cam-serial",
+      "repository": "https://github.com/nexhq/cam-serial",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Appends investigator notes to a timestamped log",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.case-note",
+      "keywords": [
+        "documentation",
+        "notes",
+        "logging"
+      ],
+      "license": "MIT",
+      "name": "case-note",
+      "repository": "https://github.com/nexhq/case-note",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Standardizes chat exports from various apps",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.chat-export",
+      "keywords": [
+        "forensics",
+        "chat",
+        "export"
+      ],
+      "license": "MIT",
+      "name": "chat-export",
+      "repository": "https://github.com/nexhq/chat-export",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses Chrome/Edge History SQLite database to extract browsing history, visit counts, and timestamps.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.chrome-hist",
+      "keywords": [
+        "forensics",
+        "browser",
+        "chrome",
+        "edge",
+        "history",
+        "sqlite"
+      ],
+      "license": "MIT",
+      "name": "chrome-hist",
+      "repository": "https://github.com/nexhq/chrome-hist",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Dumps the current clipboard content.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.clip-grab",
+      "keywords": [
+        "forensics",
+        "triage",
+        "clip-grab"
+      ],
+      "license": "MIT",
+      "name": "clip-grab",
+      "repository": "https://github.com/0xkiraa/clip-grab",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Monitors clipboard content in background.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.clipboard-spy",
+      "keywords": [
+        "clipboard",
+        "monitor",
+        "spy"
+      ],
+      "license": "MIT",
+      "name": "clipboard-spy",
+      "repository": "https://github.com/0xkiraa/clipboard-spy",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Checks for installed Cloud Sync folders (Dropbox, etc)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.cloud-sync",
+      "keywords": [
+        "forensics",
+        "cloud",
+        "sync"
+      ],
+      "license": "MIT",
+      "name": "cloud-sync",
+      "repository": "https://github.com/nexhq/cloud-sync",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Lists all established TCP/UDP connections.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.conn-active",
+      "keywords": [
+        "forensics",
+        "triage",
+        "conn-active"
+      ],
+      "license": "MIT",
+      "name": "conn-active",
+      "repository": "https://github.com/0xkiraa/conn-active",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Merges contacts from various apps to build a contact graph",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.contact-merge",
+      "keywords": [
+        "forensics",
+        "contacts",
+        "osint"
+      ],
+      "license": "MIT",
+      "name": "contact-merge",
+      "repository": "https://github.com/nexhq/contact-merge",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses browser cookies to identify logged-in sessions and authentication tokens.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.cookie-scan",
+      "keywords": [
+        "forensics",
+        "browser",
+        "cookies",
+        "session",
+        "authentication"
+      ],
+      "license": "MIT",
+      "name": "cookie-scan",
+      "repository": "https://github.com/nexhq/cookie-scan",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Checks for high CPU usage + crypto mining indicators",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.crypto-miner",
+      "keywords": [
+        "forensics",
+        "mining",
+        "malware"
+      ],
+      "license": "MIT",
+      "name": "crypto-miner",
+      "repository": "https://github.com/nexhq/crypto-miner",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Merges multiple tool outputs into one master CSV",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.csv-merge",
+      "keywords": [
+        "utilities",
+        "csv",
+        "merging"
+      ],
+      "license": "MIT",
+      "name": "csv-merge",
+      "repository": "https://github.com/nexhq/csv-merge",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts cached images from Discord Desktop",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.discord-cache",
+      "keywords": [
+        "forensics",
+        "chat",
+        "discord"
+      ],
+      "license": "MIT",
+      "name": "discord-cache",
+      "repository": "https://github.com/nexhq/discord-cache",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Dumps the local DNS resolver cache",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.dns-cache",
+      "keywords": [
+        "forensics",
+        "network",
+        "dns"
+      ],
+      "license": "MIT",
+      "name": "dns-cache",
+      "repository": "https://github.com/nexhq/dns-cache",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts list of downloaded files from all browser artifacts with danger ratings.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.download-list",
+      "keywords": [
+        "forensics",
+        "browser",
+        "downloads",
+        "malware"
+      ],
+      "license": "MIT",
+      "name": "download-list",
+      "repository": "https://github.com/nexhq/download-list",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Collects serial number and drive information",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.drive-info",
+      "keywords": [
+        "forensics",
+        "hardware",
+        "drives"
+      ],
+      "license": "MIT",
+      "name": "drive-info",
+      "repository": "https://github.com/nexhq/drive-info",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Analyzes .eml files to trace IP origin of emails",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.email-header",
+      "keywords": [
+        "forensics",
+        "email",
+        "tracing"
+      ],
+      "license": "MIT",
+      "name": "email-header",
+      "repository": "https://github.com/nexhq/email-header",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses Windows Event Logs (Security/System) for forensic analysis.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.event-log",
+      "keywords": [
+        "forensics",
+        "windows",
+        "eventlog",
+        "security",
+        "dfir"
+      ],
+      "license": "MIT",
+      "name": "event-log",
+      "repository": "https://github.com/nexhq/event-log",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Zips specific folders with password and hash manifest",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.evidence-bag",
+      "keywords": [
+        "forensics",
+        "evidence",
+        "packaging"
+      ],
+      "license": "MIT",
+      "name": "evidence-bag",
+      "repository": "https://github.com/nexhq/evidence-bag",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts GPS coordinates from photos and generates an interactive map.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.exif-map",
+      "keywords": [
+        "forensics",
+        "exif",
+        "gps",
+        "geolocation",
+        "photos"
+      ],
+      "license": "MIT",
+      "name": "exif-map",
+      "repository": "https://github.com/nexhq/exif-map",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Lists installed browser extensions with risk analysis",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.ext-audit",
+      "keywords": [
+        "forensics",
+        "browser",
+        "extensions"
+      ],
+      "license": "MIT",
+      "name": "ext-audit",
+      "repository": "https://github.com/nexhq/ext-audit",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Scans a drive for images containing faces",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.face-find",
+      "keywords": [
+        "forensics",
+        "images",
+        "faces"
+      ],
+      "license": "MIT",
+      "name": "face-find",
+      "repository": "https://github.com/nexhq/face-find",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts Facebook ID from cached HTML pages",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.fb-id",
+      "keywords": [
+        "forensics",
+        "facebook",
+        "osint"
+      ],
+      "license": "MIT",
+      "name": "fb-id",
+      "repository": "https://github.com/nexhq/fb-id",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Scans raw disk space for specific file headers (JPG, PDF, etc)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.file-carve",
+      "keywords": [
+        "forensics",
+        "carving",
+        "recovery"
+      ],
+      "license": "MIT",
+      "name": "file-carve",
+      "repository": "https://github.com/nexhq/file-carve",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses Firefox places.sqlite for history, bookmarks, and visit types.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.firefox-dump",
+      "keywords": [
+        "forensics",
+        "browser",
+        "firefox",
+        "history",
+        "bookmarks"
+      ],
+      "license": "MIT",
+      "name": "firefox-dump",
+      "repository": "https://github.com/nexhq/firefox-dump",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts autofill data (names, addresses, emails)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.form-data",
+      "keywords": [
+        "forensics",
+        "browser",
+        "autofill"
+      ],
+      "license": "MIT",
+      "name": "form-data",
+      "repository": "https://github.com/nexhq/form-data",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Lists files in local Google Drive cache database",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.gdrive-list",
+      "keywords": [
+        "forensics",
+        "gdrive",
+        "cloud"
+      ],
+      "license": "MIT",
+      "name": "gdrive-list",
+      "repository": "https://github.com/nexhq/gdrive-list",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Recursively hashes a directory (MD5/SHA256)",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.hash-deep",
+      "keywords": [
+        "forensics",
+        "hashing",
+        "integrity"
+      ],
+      "license": "MIT",
+      "name": "hash-deep",
+      "repository": "https://github.com/nexhq/hash-deep",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Compares media hashes against known bad sets",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.hash-match",
+      "keywords": [
+        "forensics",
+        "hashing",
+        "comparison"
+      ],
+      "license": "MIT",
+      "name": "hash-match",
+      "repository": "https://github.com/nexhq/hash-match",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Scans common hiding spots (System32, AppData, etc)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.hiding-places",
+      "keywords": [
+        "forensics",
+        "malware",
+        "hiding"
+      ],
+      "license": "MIT",
+      "name": "hiding-places",
+      "repository": "https://github.com/nexhq/hiding-places",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Checks hosts file for suspicious entries",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.host-file",
+      "keywords": [
+        "forensics",
+        "network",
+        "dns"
+      ],
+      "license": "MIT",
+      "name": "host-file",
+      "repository": "https://github.com/nexhq/host-file",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Checks for file system artifacts left by Private/Incognito modes",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.incognito-detect",
+      "keywords": [
+        "forensics",
+        "browser",
+        "privacy"
+      ],
+      "license": "MIT",
+      "name": "incognito-detect",
+      "repository": "https://github.com/nexhq/incognito-detect",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses Instagram image cache",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.insta-cache",
+      "keywords": [
+        "forensics",
+        "instagram",
+        "cache"
+      ],
+      "license": "MIT",
+      "name": "insta-cache",
+      "repository": "https://github.com/nexhq/insta-cache",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Scans filesystem for Indicators of Compromise",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.ioc-finder",
+      "keywords": [
+        "forensics",
+        "ioc",
+        "threat-hunting"
+      ],
+      "license": "MIT",
+      "name": "ioc-finder",
+      "repository": "https://github.com/nexhq/ioc-finder",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Tests default creds on RTSP streams (Port 554).",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.ip-camera-spy",
+      "keywords": [
+        "rtsp",
+        "camera",
+        "default-creds"
+      ],
+      "license": "MIT",
+      "name": "ip-camera-spy",
+      "repository": "https://github.com/0xkiraa/ip-camera-spy",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Traces the geolocation of IPs found in logs",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.ip-geo-trace",
+      "keywords": [
+        "network",
+        "geolocation",
+        "ip"
+      ],
+      "license": "MIT",
+      "name": "ip-geo-trace",
+      "repository": "https://github.com/nexhq/ip-geo-trace",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Exports findings to JSON for ingestion into other tools",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.json-export",
+      "keywords": [
+        "utilities",
+        "json",
+        "export"
+      ],
+      "license": "MIT",
+      "name": "json-export",
+      "repository": "https://github.com/nexhq/json-export",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses Windows Jump Lists for recent file access",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.jumplist",
+      "keywords": [
+        "forensics",
+        "windows",
+        "recent"
+      ],
+      "license": "MIT",
+      "name": "jumplist",
+      "repository": "https://github.com/nexhq/jumplist",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Simple keylogger for authorized testing.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.key-log",
+      "keywords": [
+        "keylogger",
+        "spy",
+        "monitoring"
+      ],
+      "license": "MIT",
+      "name": "key-log",
+      "repository": "https://github.com/0xkiraa/key-log",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses shortcut files (.lnk) for forensic data",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.lnk-parse",
+      "keywords": [
+        "forensics",
+        "windows",
+        "shortcuts"
+      ],
+      "license": "MIT",
+      "name": "lnk-parse",
+      "repository": "https://github.com/nexhq/lnk-parse",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses Google Takeout Location History (JSON)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.loc-history",
+      "keywords": [
+        "forensics",
+        "location",
+        "google"
+      ],
+      "license": "MIT",
+      "name": "loc-history",
+      "repository": "https://github.com/nexhq/loc-history",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Identifies device manufacturer from MAC addresses",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.mac-vendor",
+      "keywords": [
+        "network",
+        "mac",
+        "vendor"
+      ],
+      "license": "MIT",
+      "name": "mac-vendor",
+      "repository": "https://github.com/nexhq/mac-vendor",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Creates Office macros with embedded PowerShell payloads.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.macro-pack",
+      "keywords": [
+        "macro",
+        "vba",
+        "phishing"
+      ],
+      "license": "MIT",
+      "name": "macro-pack",
+      "repository": "https://github.com/0xkiraa/macro-pack",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses mbox files (Thunderbird/Google Takeout)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.mail-parse",
+      "keywords": [
+        "forensics",
+        "email",
+        "mbox"
+      ],
+      "license": "MIT",
+      "name": "mail-parse",
+      "repository": "https://github.com/nexhq/mail-parse",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Static Malware Sandbox - Extracts PE headers, strings, entropy, and matches against known malware signatures without executing the file.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.nex-box",
+      "keywords": [
+        "malware-analysis",
+        "static-analysis",
+        "pe-parser",
+        "sandbox",
+        "reverse-engineering"
+      ],
+      "license": "MIT",
+      "name": "nex-box",
+      "repository": "https://github.com/0xkiraa/nex-box",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Network Intrusion Detection System (NIDS) - Sniffs live traffic and alerts on suspicious patterns like port scans, SQL injection, XSS attacks, and more.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.nex-guard",
+      "keywords": [
+        "nids",
+        "intrusion-detection",
+        "packet-analysis",
+        "security",
+        "sniffing"
+      ],
+      "license": "MIT",
+      "name": "nex-guard",
+      "repository": "https://github.com/0xkiraa/nex-guard",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Log Analyzer - Parses Apache/Nginx access logs to detect SQL injection, XSS, path traversal attacks, scanners, and suspicious IPs.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.nex-parse",
+      "keywords": [
+        "log-analysis",
+        "web-security",
+        "intrusion-detection",
+        "regex",
+        "apache",
+        "nginx"
+      ],
+      "license": "MIT",
+      "name": "nex-parse",
+      "repository": "https://github.com/0xkiraa/nex-parse",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Password Strength Auditor - Checks password complexity, entropy, and compares against the Have I Been Pwned breach database.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.nex-pass",
+      "keywords": [
+        "password",
+        "security",
+        "entropy",
+        "hibp",
+        "breach-detection",
+        "auditing"
+      ],
+      "license": "MIT",
+      "name": "nex-pass",
+      "repository": "https://github.com/0xkiraa/nex-pass",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Process Monitor - A terminal dashboard that highlights unusual processes based on CPU usage, suspicious paths, and behavioral patterns.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.nex-proc",
+      "keywords": [
+        "process-monitor",
+        "system-calls",
+        "security",
+        "threat-hunting",
+        "dashboard"
+      ],
+      "license": "MIT",
+      "name": "nex-proc",
+      "repository": "https://github.com/0xkiraa/nex-proc",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Automated Incident Response - Automatically blocks IPs, kills processes, quarantines files, and isolates machines during security incidents.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.nex-respond",
+      "keywords": [
+        "incident-response",
+        "automation",
+        "firewall",
+        "containment",
+        "dfir"
+      ],
+      "license": "MIT",
+      "name": "nex-respond",
+      "repository": "https://github.com/0xkiraa/nex-respond",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Mini Web Application Firewall - A reverse proxy that inspects HTTP requests and blocks SQL injection, XSS, RCE, and other web attacks.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.nex-shield",
+      "keywords": [
+        "waf",
+        "firewall",
+        "proxy",
+        "xss",
+        "sqli",
+        "security"
+      ],
+      "license": "MIT",
+      "name": "nex-shield",
+      "repository": "https://github.com/0xkiraa/nex-shield",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "SSH Honeypot - A fake SSH server that captures attacker credentials, commands, and behavior for security research and threat intelligence.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.nex-trap",
+      "keywords": [
+        "honeypot",
+        "ssh",
+        "threat-intelligence",
+        "security-research",
+        "logging"
+      ],
+      "license": "MIT",
+      "name": "nex-trap",
+      "repository": "https://github.com/0xkiraa/nex-trap",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Forensic Triage Collector - Rapidly collects processes, network connections, browser history, and system artifacts for incident response.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.nex-triage",
+      "keywords": [
+        "forensics",
+        "triage",
+        "incident-response",
+        "artifacts",
+        "dfir"
+      ],
+      "license": "MIT",
+      "name": "nex-triage",
+      "repository": "https://github.com/0xkiraa/nex-triage",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "File Integrity Monitor (FIM) - Monitors critical folders with SHA256 hashing and alerts on file modifications, creations, or deletions.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.nex-watch",
+      "keywords": [
+        "fim",
+        "file-integrity",
+        "monitoring",
+        "hashing",
+        "security"
+      ],
+      "license": "MIT",
+      "name": "nex-watch",
+      "repository": "https://github.com/0xkiraa/nex-watch",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Scans for and mounts open NFS shares.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.nfs-mount",
+      "keywords": [
+        "nfs",
+        "share",
+        "mount"
+      ],
+      "license": "MIT",
+      "name": "nfs-mount",
+      "repository": "https://github.com/0xkiraa/nfs-mount",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "node main.js",
+        "install": "npm install"
+      },
+      "description": "Obfuscates Javascript code to bypass static analysis.",
+      "entrypoint": "main.js",
+      "id": "0xkiraa.obfuscator",
+      "keywords": [
+        "javascript",
+        "obfuscation",
+        "evasion"
+      ],
+      "license": "MIT",
+      "name": "obfuscator",
+      "repository": "https://github.com/0xkiraa/obfuscator",
+      "runtime": {
+        "type": "node"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Scans localhost for listening ports",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.open-ports",
+      "keywords": [
+        "network",
+        "ports",
+        "scanning"
+      ],
+      "license": "MIT",
+      "name": "open-ports",
+      "repository": "https://github.com/nexhq/open-ports",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Reads headers and subjects from Outlook PST/OST files",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.outlook-pst",
+      "keywords": [
+        "forensics",
+        "email",
+        "outlook"
+      ],
+      "license": "MIT",
+      "name": "outlook-pst",
+      "repository": "https://github.com/nexhq/outlook-pst",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Checks found emails against Have I Been Pwned",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.pass-check",
+      "keywords": [
+        "osint",
+        "hibp",
+        "breach"
+      ],
+      "license": "MIT",
+      "name": "pass-check",
+      "repository": "https://github.com/nexhq/pass-check",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Decrypts saved browser passwords (if master key available)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.pass-decrypt",
+      "keywords": [
+        "forensics",
+        "passwords",
+        "browser"
+      ],
+      "license": "MIT",
+      "name": "pass-decrypt",
+      "repository": "https://github.com/nexhq/pass-decrypt",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Replays a captured .pcap file to analyze traffic",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.pcap-replay",
+      "keywords": [
+        "network",
+        "pcap",
+        "analysis"
+      ],
+      "license": "MIT",
+      "name": "pcap-replay",
+      "repository": "https://github.com/nexhq/pcap-replay",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Analyzes PowerShell event logs (Script Block Logging)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.pow-shell-log",
+      "keywords": [
+        "forensics",
+        "powershell",
+        "logging"
+      ],
+      "license": "MIT",
+      "name": "pow-shell-log",
+      "repository": "https://github.com/nexhq/pow-shell-log",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses Windows Prefetch files (.pf) to show program execution history.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.prefetch-parse",
+      "keywords": [
+        "forensics",
+        "windows",
+        "prefetch",
+        "execution",
+        "timeline"
+      ],
+      "license": "MIT",
+      "name": "prefetch-parse",
+      "repository": "https://github.com/nexhq/prefetch-parse",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Generates a tree structure text file of the drive",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.print-dir",
+      "keywords": [
+        "documentation",
+        "directory",
+        "listing"
+      ],
+      "license": "MIT",
+      "name": "print-dir",
+      "repository": "https://github.com/nexhq/print-dir",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Sends PJL commands to change printer display message.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.printer-pwn",
+      "keywords": [
+        "printer",
+        "pjl",
+        "prank"
+      ],
+      "license": "MIT",
+      "name": "printer-pwn",
+      "repository": "https://github.com/0xkiraa/printer-pwn",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Lists all running processes with PIDs and parent PIDs.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.process-list",
+      "keywords": [
+        "forensics",
+        "triage",
+        "process-list"
+      ],
+      "license": "MIT",
+      "name": "process-list",
+      "repository": "https://github.com/0xkiraa/process-list",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Checks browser/system settings for proxy configurations",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.proxy-detect",
+      "keywords": [
+        "network",
+        "proxy",
+        "detection"
+      ],
+      "license": "MIT",
+      "name": "proxy-detect",
+      "repository": "https://github.com/nexhq/proxy-detect",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Dumps volatile RAM to an external drive (using WinPmem/Lime).",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.ram-dump",
+      "keywords": [
+        "forensics",
+        "triage",
+        "ram-dump"
+      ],
+      "license": "MIT",
+      "name": "ram-dump",
+      "repository": "https://github.com/0xkiraa/ram-dump",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Scans for common ransomware note filenames",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.ransom-note",
+      "keywords": [
+        "forensics",
+        "ransomware",
+        "detection"
+      ],
+      "license": "MIT",
+      "name": "ransom-note",
+      "repository": "https://github.com/nexhq/ransom-note",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts bitmap cache from RDP sessions",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.rdp-cache",
+      "keywords": [
+        "forensics",
+        "rdp",
+        "cache"
+      ],
+      "license": "MIT",
+      "name": "rdp-cache",
+      "repository": "https://github.com/nexhq/rdp-cache",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Uses RDP Bitmap Cache to reconstruct remote screen (BlueKeep related).",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.rdp-screenshot",
+      "keywords": [
+        "rdp",
+        "screenshot",
+        "bluekeep"
+      ],
+      "license": "MIT",
+      "name": "rdp-screenshot",
+      "repository": "https://github.com/0xkiraa/rdp-screenshot",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts 'Recent Files' (Windows .lnk) or 'Recent Items'.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.recent-files",
+      "keywords": [
+        "forensics",
+        "triage",
+        "recent-files"
+      ],
+      "license": "MIT",
+      "name": "recent-files",
+      "repository": "https://github.com/0xkiraa/recent-files",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses $Recycle.Bin metadata, recovers MFT deleted files, and extracts evidence artifacts.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.recycle-parse",
+      "keywords": [],
+      "license": "MIT",
+      "name": "recycle-parse",
+      "repository": "https://github.com/0xkiraa/recycle-parse",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.1.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Checks Registry Run and RunOnce keys for persistence",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.reg-run",
+      "keywords": [
+        "forensics",
+        "windows",
+        "persistence"
+      ],
+      "license": "MIT",
+      "name": "reg-run",
+      "repository": "https://github.com/nexhq/reg-run",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Generates a PDF report of all findings",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.report-gen",
+      "keywords": [
+        "reporting",
+        "pdf",
+        "documentation"
+      ],
+      "license": "MIT",
+      "name": "report-gen",
+      "repository": "https://github.com/nexhq/report-gen",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Checks for hidden processes or modified binaries",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.rootkit-chk",
+      "keywords": [
+        "forensics",
+        "rootkit",
+        "malware"
+      ],
+      "license": "MIT",
+      "name": "rootkit-chk",
+      "repository": "https://github.com/nexhq/rootkit-chk",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Takes a screenshot of the desktop immediately.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.screen-cap",
+      "keywords": [
+        "forensics",
+        "triage",
+        "screen-cap"
+      ],
+      "license": "MIT",
+      "name": "screen-cap",
+      "repository": "https://github.com/0xkiraa/screen-cap",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Runs OCR on screenshot images found on drive",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.screenshot-ocr",
+      "keywords": [
+        "forensics",
+        "ocr",
+        "screenshots"
+      ],
+      "license": "MIT",
+      "name": "screenshot-ocr",
+      "repository": "https://github.com/nexhq/screenshot-ocr",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts search engine queries from URL history",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.search-terms",
+      "keywords": [
+        "forensics",
+        "browser",
+        "search"
+      ],
+      "license": "MIT",
+      "name": "search-terms",
+      "repository": "https://github.com/nexhq/search-terms",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Mounts Windows Volume Shadow Copies (VSS)",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.shadow-mount",
+      "keywords": [
+        "forensics",
+        "vss",
+        "recovery"
+      ],
+      "license": "MIT",
+      "name": "shadow-mount",
+      "repository": "https://github.com/nexhq/shadow-mount",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses ShellBags registry keys for folder access history",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.shell-bags",
+      "keywords": [
+        "forensics",
+        "windows",
+        "registry"
+      ],
+      "license": "MIT",
+      "name": "shell-bags",
+      "repository": "https://github.com/nexhq/shell-bags",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Generates reverse shell one-liners for various languages.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.shell-gen",
+      "keywords": [
+        "shell",
+        "payload",
+        "reverse-shell"
+      ],
+      "license": "MIT",
+      "name": "shell-gen",
+      "repository": "https://github.com/0xkiraa/shell-gen",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses the Application Compatibility Cache (ShimCache)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.shim-cache",
+      "keywords": [
+        "forensics",
+        "windows",
+        "execution"
+      ],
+      "license": "MIT",
+      "name": "shim-cache",
+      "repository": "https://github.com/nexhq/shim-cache",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Verifies digital signatures of system files",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.sig-check",
+      "keywords": [
+        "forensics",
+        "signatures",
+        "integrity"
+      ],
+      "license": "MIT",
+      "name": "sig-check",
+      "repository": "https://github.com/nexhq/sig-check",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Decrypts Signal Desktop database if local key present",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.signal-desktop",
+      "keywords": [
+        "forensics",
+        "chat",
+        "signal"
+      ],
+      "license": "MIT",
+      "name": "signal-desktop",
+      "repository": "https://github.com/nexhq/signal-desktop",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Scans for images with high percentage of skin tone",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.skin-tone",
+      "keywords": [
+        "forensics",
+        "images",
+        "analysis"
+      ],
+      "license": "MIT",
+      "name": "skin-tone",
+      "repository": "https://github.com/nexhq/skin-tone",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses Skype main.db for messages and calls",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.skype-log",
+      "keywords": [
+        "forensics",
+        "chat",
+        "skype"
+      ],
+      "license": "MIT",
+      "name": "skype-log",
+      "repository": "https://github.com/nexhq/skype-log",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Reads data from the end of files (file slack)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.slack-space",
+      "keywords": [
+        "forensics",
+        "slack",
+        "hidden"
+      ],
+      "license": "MIT",
+      "name": "slack-space",
+      "repository": "https://github.com/nexhq/slack-space",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "bash main.sh",
+        "install": "echo 'No install needed'"
+      },
+      "description": "Lists available network shares",
+      "entrypoint": "main.sh",
+      "id": "0xkiraa.smb-shares",
+      "keywords": [
+        "network",
+        "smb",
+        "shares"
+      ],
+      "license": "MIT",
+      "name": "smb-shares",
+      "repository": "https://github.com/nexhq/smb-shares",
+      "runtime": {
+        "type": "bash"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses common Android SMS backup XML files",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.sms-backup",
+      "keywords": [
+        "forensics",
+        "mobile",
+        "sms"
+      ],
+      "license": "MIT",
+      "name": "sms-backup",
+      "repository": "https://github.com/nexhq/sms-backup",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Scrapes public profiles given a username (OSINT)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.social-scrape",
+      "keywords": [
+        "osint",
+        "social",
+        "scraping"
+      ],
+      "license": "MIT",
+      "name": "social-scrape",
+      "repository": "https://github.com/nexhq/social-scrape",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Audits the Startup folder for unknown scripts",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.startup-audit",
+      "keywords": [
+        "forensics",
+        "persistence",
+        "startup"
+      ],
+      "license": "MIT",
+      "name": "startup-audit",
+      "repository": "https://github.com/nexhq/startup-audit",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Analyzes images for statistical anomalies (steganography)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.steg-detect",
+      "keywords": [
+        "forensics",
+        "steganography",
+        "analysis"
+      ],
+      "license": "MIT",
+      "name": "steg-detect",
+      "repository": "https://github.com/nexhq/steg-detect",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Embeds text/files into images using LSB steganography.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.steg-hide",
+      "keywords": [
+        "steganography",
+        "lsb",
+        "covert"
+      ],
+      "license": "MIT",
+      "name": "steg-hide",
+      "repository": "https://github.com/0xkiraa/steg-hide",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Hashes key system files and generates a hardware ID.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.sys-info-hash",
+      "keywords": [
+        "forensics",
+        "triage",
+        "sys-info-hash"
+      ],
+      "license": "MIT",
+      "name": "sys-info-hash",
+      "repository": "https://github.com/0xkiraa/sys-info-hash",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts images/videos from Telegram Desktop cache",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.telegram-cache",
+      "keywords": [
+        "forensics",
+        "chat",
+        "telegram"
+      ],
+      "license": "MIT",
+      "name": "telegram-cache",
+      "repository": "https://github.com/nexhq/telegram-cache",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts thumbnails from Windows thumbcache_*.db",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.thumb-cache",
+      "keywords": [
+        "forensics",
+        "thumbnails",
+        "images"
+      ],
+      "license": "MIT",
+      "name": "thumb-cache",
+      "repository": "https://github.com/nexhq/thumb-cache",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Rebuilds viewable images from partial thumbnail data",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.thumb-rebuild",
+      "keywords": [
+        "forensics",
+        "thumbnails",
+        "recovery"
+      ],
+      "license": "MIT",
+      "name": "thumb-rebuild",
+      "repository": "https://github.com/nexhq/thumb-rebuild",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Creates a visual timeline (HTML) of all events",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.timeline-vis",
+      "keywords": [
+        "reporting",
+        "timeline",
+        "visualization"
+      ],
+      "license": "MIT",
+      "name": "timeline-vis",
+      "repository": "https://github.com/nexhq/timeline-vis",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Checks for Tor browser artifacts or processes",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.tor-check",
+      "keywords": [
+        "forensics",
+        "tor",
+        "privacy"
+      ],
+      "license": "MIT",
+      "name": "tor-check",
+      "repository": "https://github.com/nexhq/tor-check",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Collects system time, user, and network info immediately upon access.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.triage-lite",
+      "keywords": [
+        "forensics",
+        "triage",
+        "triage-lite"
+      ],
+      "license": "MIT",
+      "name": "triage-lite",
+      "repository": "https://github.com/0xkiraa/triage-lite",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses Twitter/X archive (if downloaded)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.tweet-arch",
+      "keywords": [
+        "forensics",
+        "twitter",
+        "archive"
+      ],
+      "license": "MIT",
+      "name": "tweet-arch",
+      "repository": "https://github.com/nexhq/tweet-arch",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Checks for known UAC configurations and potential bypasses.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.uac-bypass",
+      "keywords": [
+        "uac",
+        "privilege-escalation",
+        "windows"
+      ],
+      "license": "MIT",
+      "name": "uac-bypass",
+      "repository": "https://github.com/0xkiraa/uac-bypass",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Lists all USB devices previously connected to the system.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.usb-history",
+      "keywords": [
+        "forensics",
+        "triage",
+        "usb-history"
+      ],
+      "license": "MIT",
+      "name": "usb-history",
+      "repository": "https://github.com/0xkiraa/usb-history",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses setupapi.dev.log for USB device history",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.usb-setup",
+      "keywords": [
+        "forensics",
+        "usb",
+        "devices"
+      ],
+      "license": "MIT",
+      "name": "usb-setup",
+      "repository": "https://github.com/nexhq/usb-setup",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Extracts creation date/device model from video files",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.video-meta",
+      "keywords": [
+        "forensics",
+        "video",
+        "metadata"
+      ],
+      "license": "MIT",
+      "name": "video-meta",
+      "repository": "https://github.com/nexhq/video-meta",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Attempts authentication bypass on VNC servers.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.vnc-bypass",
+      "keywords": [
+        "vnc",
+        "bypass",
+        "exploit"
+      ],
+      "license": "MIT",
+      "name": "vnc-bypass",
+      "repository": "https://github.com/0xkiraa/vnc-bypass",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Basic voice print comparison (experimental)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.voice-match",
+      "keywords": [
+        "forensics",
+        "audio",
+        "voiceprint"
+      ],
+      "license": "MIT",
+      "name": "voice-match",
+      "repository": "https://github.com/nexhq/voice-match",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses logs from common VPN clients",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.vpn-logs",
+      "keywords": [
+        "forensics",
+        "vpn",
+        "network"
+      ],
+      "license": "MIT",
+      "name": "vpn-logs",
+      "repository": "https://github.com/nexhq/vpn-logs",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses encrypted WhatsApp databases (msgstore.db)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.whatsapp-db",
+      "keywords": [
+        "forensics",
+        "chat",
+        "whatsapp"
+      ],
+      "license": "MIT",
+      "name": "whatsapp-db",
+      "repository": "https://github.com/nexhq/whatsapp-db",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Checks for traces of file wiping tools (CCleaner, etc)",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.wipe-check",
+      "keywords": [
+        "forensics",
+        "antiforensics",
+        "wiping"
+      ],
+      "license": "MIT",
+      "name": "wipe-check",
+      "repository": "https://github.com/nexhq/wipe-check",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Generates custom wordlists based on target profile keywords.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.wordlist-gen",
+      "keywords": [
+        "wordlist",
+        "cracking",
+        "bruteforce"
+      ],
+      "license": "MIT",
+      "name": "wordlist-gen",
+      "repository": "https://github.com/0xkiraa/wordlist-gen",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Scans files against YARA rules for malware detection with built-in rules.",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.yara-scan",
+      "keywords": [
+        "malware",
+        "yara",
+        "detection",
+        "scanning",
+        "forensics"
+      ],
+      "license": "MIT",
+      "name": "yara-scan",
+      "repository": "https://github.com/nexhq/yara-scan",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Attempts to repair or list contents of corrupted ZIPs",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.zip-recover",
+      "keywords": [
+        "forensics",
+        "recovery",
+        "archive"
+      ],
+      "license": "MIT",
+      "name": "zip-recover",
+      "repository": "https://github.com/nexhq/zip-recover",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "$schema": "https://raw.githubusercontent.com/nexhq/nex/main/registry/schema/package.schema.json",
+      "author": {
+        "github": "0xkiraa",
+        "name": "0xkiraa"
+      },
+      "commands": {
+        "default": "python main.py",
+        "install": "pip install -r requirements.txt"
+      },
+      "description": "Parses Zoom logs to find meeting participants and times",
+      "entrypoint": "main.py",
+      "id": "0xkiraa.zoom-log",
+      "keywords": [
+        "forensics",
+        "meetings",
+        "zoom"
+      ],
+      "license": "MIT",
+      "name": "zoom-log",
+      "repository": "https://github.com/nexhq/zoom-log",
+      "runtime": {
+        "type": "python"
+      },
+      "version": "1.0.0"
+    }
+  ]
 }
