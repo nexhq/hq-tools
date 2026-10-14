@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/nexhq/hq-tools/main/schema/tools.schema.json",
-  "lastUpdated": "2026-10-13T04:52:46ZZ",
+  "lastUpdated": "2026-10-14T02:59:55ZZ",
   "organization": "nexhq",
   "tools": [
     {
